@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Ride</title>
+  <style>
+	body {
+		opacity: 0; /* Start invisible */
+		transition: opacity 1.5s ease-in; /* Smooth fade-in effect */
+		transition: opacity 1s ease-in-out;
+	}
+	body.loaded {
+		opacity: 1; /* Fully visible */
+	}
+	body.fade-out {
+      opacity: 0;
+    }
+</style>
+ <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background: black;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .quote {
+            position: absolute;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            text-align: center;
+            z-index: 1; /* Ensure it appears above the canvas */
+        }
+    </style>
+
+</head>
+<body>
+	<audio id="backgroundMusic" loop>
+        <source src="tran.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+<script type="x-shader/x-fragment">#version 300 es
+/*********
+* made by Ashish kumar laheri
+*/   
+precision highp float;
+out vec4 O;
+uniform float time;
+uniform vec2 resolution;
+#define FC gl_FragCoord.xy
+#define R resolution
+#define T time
+#define hue(a) (.6+.6*cos(6.3*(a)+vec3(0,83,21)))
+float rnd(float a) {
+	vec2 p=fract(a*vec2(12.9898,78.233));	p+=dot(p,p*345.);
+	return fract(p.x*p.y);
+}
+vec3 pattern(vec2 uv) {
+	vec3 col=vec3(0);
+	for (float i=.0; i++<20.;) {
+		float a=rnd(i);
+		vec2 n=vec2(a,fract(a*34.56)), p=sin(n*(T+7.)+T*.5);
+		float d=dot(uv-p,uv-p);
+		col+=.00125/d*hue(dot(uv,uv)+i*.125+T);
+	}
+	return col;
+}
+void main(void) {
+	vec2 uv=(FC-.5*R)/min(R.x,R.y);
+	vec3 col=vec3(0);
+	float s=2.4,
+	a=atan(uv.x,uv.y),
+	b=length(uv);
+	uv=vec2(a*5./6.28318,.05/tan(b)+T);
+	uv=fract(uv)-.5;
+	col+=pattern(uv*s);
+	O=vec4(col,1);
+}</script>
+<!-- partial -->
+  <script  src="tansition.js"></script>
+  <script>
+	// Add the 'loaded' class after the page has fully loaded
+	window.addEventListener('load', () => {
+		document.body.classList.add('loaded');
+	});
+</script>
+<script>
+    // Redirect after a delay of 7 seconds
+    setTimeout(() => {
+      // Trigger the fade-out effect
+      document.body.classList.add('fade-out');
+
+      // Redirect after the fade-out transition ends
+      setTimeout(() => {
+        window.location.href = "home.html";
+
+        // Prevent Back Navigation
+        history.pushState(null, null, window.location.href);
+        window.onpopstate = () => {
+          history.pushState(null, null, window.location.href);
+        };
+      }, 1000); // Match this timeout to the CSS transition duration (1 second)
+    }, 7000); // Initial delay of 7 seconds
+  </script>
+</body>
+</html>
