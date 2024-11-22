@@ -51,7 +51,7 @@ function init() {
 
   // Add Background Music
   const audio = document.createElement("audio");
-  audio.src = "sound/tran.mp3"; // Replace with your audio file path
+  audio.src = "tran.mp3"; // Replace with your audio file path
   audio.loop = true;
   audio.autoplay = true;
   audio.style.display = "none"; // Hide audio element
