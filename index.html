@@ -456,6 +456,6 @@
         }, ); // Optional delay before fade-out starts
         });
 </script>
-<script> const animationElement = document.getElementById('openWebsite'); const mySound = document.getElementById('mySound'); animationElement.addEventListener('mouseover', function() { mySound.play(); }); animationElement.addEventListener('mouseout', function() { mySound.pause(); mySound.currentTime = 0; }); </script>
+<script> const animationElement = document.getElementById('openWebsite'); const mySound = document.getElementById('mySound'); animationElement.addEventListener('mouseover', function() { mySound.play(); }); animationElement.addEventListener('mouseout', function() { mySound.pause(); mySound.currentTime = 0; }); animationElement.addEventListener('click', function() { mySound.pause(); mySound.currentTime = 0; }); </script>
 </body>
 </html>
