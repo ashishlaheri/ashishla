@@ -97,8 +97,12 @@ main {
   text-align: center;
   height:100vh;
   min-height:100vh;
+  
   /*
   */
+}
+.aboutse{
+  margin-top: 300px;
 }
 
 .main-section h2 {
@@ -124,7 +128,7 @@ main {
   background-size: cover;
   background-position: center;
   & img {
-    width:100%;
+    width:80%;
   }
 }
 
