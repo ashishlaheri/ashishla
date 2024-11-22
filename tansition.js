@@ -34,7 +34,7 @@ function init() {
 
   // Append the quote
   const quoteDiv = document.createElement("div");
-  quoteDiv.innerHTML = `"The only limit to our realization of tomorrow is our doubts of today." - Franklin D. Roosevelt`;
+  quoteDiv.innerHTML = `"Explore, dream, and then explore some more."`;
   quoteDiv.style = `
     position: absolute;
     top: 50%;

@@ -5,7 +5,15 @@
   <title>Ashish kumaar laheri</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
-
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Metal+Mania');
+  @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+  .quote{
+    font-family: "Metal Mania";
+    font-weight: bolder;
+    font-size: 250%;
+  }
+</style>
 </head>
 <body>
 
@@ -274,6 +282,7 @@
 </div>
 <div class="scene">
   <div class="sun"></div>
+  <div><h1 class="quote">You ain't in universe, You are the universe</h1></div>
   <div class="planet"></div>
   <div class="planet-2"></div>
   <div class="planet-3"></div>
@@ -434,6 +443,7 @@
     <div class="dot dot-4"></div>
     <div class="dot dot-5"></div>
   </div>
+  <audio id="mySound" src="electric.mp3" loop></audio>
 </div>
 <script>
    document.getElementById("openWebsite").addEventListener("click", () => {
@@ -446,5 +456,6 @@
         }, ); // Optional delay before fade-out starts
         });
 </script>
+<script> const animationElement = document.getElementById('openWebsite'); const mySound = document.getElementById('mySound'); animationElement.addEventListener('mouseover', function() { mySound.play(); }); animationElement.addEventListener('mouseout', function() { mySound.pause(); mySound.currentTime = 0; }); </script>
 </body>
 </html>
