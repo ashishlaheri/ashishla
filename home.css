@@ -138,11 +138,16 @@ main {
   flex-wrap: wrap;
   gap: 2rem;
   padding: 2rem 1rem;
+  
+}
+.project-logo{
+  cursor: pointer;
 }
 
 .team-member {
   flex: 1 1 200px;
   text-align: center;
+  
 }
 
 footer {

@@ -75,3 +75,4 @@ document.querySelector('.go').addEventListener('click', function (e) {
 document.getElementById('redir1').addEventListener('click', function() { window.open('https://youtu.be/eF_JDIWrsZ0?si=1tH8J3cY7sCgTe2y', '_blank'); });
 document.getElementById('redir2').addEventListener('click', function() { window.open('https://github.com/ashishlaheri', '_blank'); });
 document.getElementById('redir3').addEventListener('click', function() { window.open('https://www.linkedin.com/in/ashish-kumar-laheri/', '_blank'); });
+document.getElementById('redir4').addEventListener('click', function() { window.open('#', '_blank'); });
