@@ -128,7 +128,7 @@ main {
   background-size: cover;
   background-position: center;
   & img {
-    width:80%;
+    width:65%;
   }
 }
 
@@ -244,6 +244,11 @@ footer a {
   line-height: 1;
   padding: 5px;
 }
+.redidiv{
+  flex: none;
+  margin: 0%;
+  padding: 0%;
+}
 
 .button-cover,
 .knobs,
@@ -330,3 +335,99 @@ footer a {
 #toggle-button .checkbox:checked ~ .layer {
   background-color: #fcebeb;
 }
+/* General Container Styling */
+.link-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* Image Styling */
+.poem-image {
+  max-width: 65%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect */
+}
+
+.poem-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Link Styling */
+.styled-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(90deg, #61b3ff, #fb7066); /* Gradient background */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.styled-link:hover {
+  background: linear-gradient(90deg, #fb7066, #61b3ff); /* Reverse gradient on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.styled-link:active {
+  transform: translateY(1px); /* Slight push-down effect */
+}
+/* Styling for the Swiper Image */
+#redir1 {
+  max-width: 65%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+/* Styling for the Swiper Image */
+#redir2 {
+  max-width: 65%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+/* Styling for the Swiper Image */
+#redir3 {
+  max-width: 65%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+
+/* Styling for the Swiper Image */
+#redir4 {
+  max-width: 65%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+
+/* Styling for the Swiper Image */
+#redir5 {
+  max-width: 65%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  cursor: pointer; /* Indicate it's clickable */
+}
+

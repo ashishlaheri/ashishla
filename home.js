@@ -76,3 +76,11 @@ document.getElementById('redir1').addEventListener('click', function() { window.
 document.getElementById('redir2').addEventListener('click', function() { window.open('https://github.com/ashishlaheri', '_blank'); });
 document.getElementById('redir3').addEventListener('click', function() { window.open('https://www.linkedin.com/in/ashish-kumar-laheri/', '_blank'); });
 document.getElementById('redir4').addEventListener('click', function() { window.open('#', '_blank'); });
+document.getElementsByClassName("redirect-section1")[0].addEventListener("click", () => {
+  // Redirect to a blank page or any URL
+  window.open("https://github.com/ashishlaheri/J.A.R.V.I.S", "_blank");
+});
+document.getElementsByClassName("redirect-section2")[0].addEventListener("click", () => {
+  // Redirect to a blank page or any URL
+  window.open("https://github.com/ashishlaheri/bank-management-system", "_blank");
+});
