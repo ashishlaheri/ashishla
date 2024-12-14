@@ -1,45 +1,141 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Reboot Night-Ashish.k.laheri</title>
-  <link rel="stylesheet" href="p.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish's Poem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Dancing Script', cursive;
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            display: flex;
+            justify-content: flex-start; /* Allows content to flow */
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-y: auto; /* Enables vertical scrolling */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: #fff;
+            border: 3px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin-bottom: 30px; /* Space for large screens */
+        }
+
+        .fading-image {
+            width: 100%;
+            height: 200px;
+            background: url('test.png') no-repeat center/cover;
+            position: relative;
+        }
+
+        .fading-image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+        }
+
+        .notebook {
+            padding: 40px 30px;
+            background: repeating-linear-gradient(
+                180deg,
+                #fff,
+                #fff 39px,
+                #f7f3eb 40px
+            );
+            text-align: center;
+        }
+
+        .header h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #5e3d28;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .poem-content {
+            font-size: 22px;
+            color: #4a3b2b;
+            line-height: 2;
+            word-spacing: 2px;
+            white-space: pre-line; /* Maintains line breaks */
+        }
+
+        .poem-content span {
+            font-weight: bold;
+            color: #744c3a;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #5e3d28;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 0;
+            }
+
+            .fading-image {
+                height: 150px;
+            }
+
+            .notebook {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .poem-content {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-
-<body>
-
-	<div id="poem">
-
-		<h1>Reboot Night</h1>
-		
-		<h2>by Ashish.k.Laheri , 2024</h2>
-	
-		<p>Morning's light erased the Night<br />
-		Love,a shadow lost from Sight.
-		</p>
-		
-		<p>Thought's a hazy Cloud<br />
-		A fight to scream a Loud<br>
-		</p>
-		
-		<p>Where heart and mind align<br />
-		In rhythm they Entwine.<br />
-		</p>
-		<p>Whispered echoes in the Night<br />
-			A dance of shadow in the Light<br />
-			</p>
-	</div>
-	
-	<p class="hero" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Reboot Night</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/ashish-kumar-laheri/">Ashish kumar laheri</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
-	
-
-</body>
-
-</html>
-<!-- partial -->
-  
+    <div class="container">
+        <div class="fading-image"></div>
+        <div class="notebook">
+            <div class="header">
+                <h1>Fantasy World</h1>
+            </div>
+            <div class="poem-content">
+                The <span>Wishes</span> in my mind in hope of kind<br>
+                I like to visit Fantasy world of mine.<br><br>
+                Place of all childhood memories<br>
+                Like to forget all my Miseries.<br><br>
+                The wall of dreams to crawl like <span>Spiderman</span><br>
+                Always away from being a regular Man.<br><br>
+                Ninjas cartoons on my <span>HEAD</span><br>
+                I love to seek the world AHEAD.<br><br>
+                Crashing into my world of heavens and <span>HELL</span><br>
+                I'll still be wondering dreams in my WELL.
+            </div>
+            <div class="footer">
+                &copy; 2024 Ashish Kumar Laheri
+            </div>
+        </div>
+    </div>
 </body>
 </html>

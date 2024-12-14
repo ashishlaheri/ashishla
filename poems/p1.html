@@ -1,46 +1,141 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Time will show you the path-ashish.k.laheri</title>
-  <link rel="stylesheet" href="p.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish's Poem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Dancing Script', cursive;
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            display: flex;
+            justify-content: flex-start; /* Allows content to flow */
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-y: auto; /* Enables vertical scrolling */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: #fff;
+            border: 3px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin-bottom: 30px; /* Space for large screens */
+        }
+
+        .fading-image {
+            width: 100%;
+            height: 200px;
+            background: url('test.png') no-repeat center/cover;
+            position: relative;
+        }
+
+        .fading-image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+        }
+
+        .notebook {
+            padding: 40px 30px;
+            background: repeating-linear-gradient(
+                180deg,
+                #fff,
+                #fff 39px,
+                #f7f3eb 40px
+            );
+            text-align: center;
+        }
+
+        .header h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #5e3d28;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .poem-content {
+            font-size: 22px;
+            color: #4a3b2b;
+            line-height: 2;
+            word-spacing: 2px;
+            white-space: pre-line; /* Maintains line breaks */
+        }
+
+        .poem-content span {
+            font-weight: bold;
+            color: #744c3a;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #5e3d28;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 0;
+            }
+
+            .fading-image {
+                height: 150px;
+            }
+
+            .notebook {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .poem-content {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-	<div id="poem">
-
-		<h1>Time Will Show You  Path</h1>
-		
-		<h2>by Ashish.k.Laheri , 2024</h2>
-	
-		<p>The redemption of mind<br />
-		That is  the Human kind.
-		</p>
-		
-		<p>A mature mind and loving heart.<br />
-		YES, This is all I got.<br>
-		</p>
-		
-		<p>Love in Search Of All.<br />
-		Time Teach Us All.<br />
-		</p>
-		<p>Woried in happy or Sad<br />
-			Self Love Is All You Had<br />
-			</p>
-		<p>Shadow depth of brain<br />
-			Time Is Unriavalled Train.<br />
-			</p>
-	</div>
-	
-	<p class="hero" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Fantasy seek ahead</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/ashish-kumar-laheri/">Ashish kumar laheri</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
-	
-
-</body>
-
-</html>
-<!-- partial -->
-  
+    <div class="container">
+        <div class="fading-image"></div>
+        <div class="notebook">
+            <div class="header">
+                <h1>Time Will Show You The Path</h1>
+            </div>
+            <div class="poem-content">
+                The <span>Redemption</span> of mind<br>
+                That's the human kind.<br><br>
+                A mature mind and loving heart<br>
+                Yes, This is all I got.<br><br>
+                Love in search for <span>All</span><br>
+                Time teach us all.<br><br>
+                Worried in happy <span>OR</span> sad<br>
+                Self-love is all you had.<br><br>
+                Shadow depth of brain<br>
+                Time is <span>Unrivalled</span> train
+            </div>
+            <div class="footer">
+                <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Time will show you the path</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://in.linkedin.com/in/ashish-kumar-laheri">Ashish kumar laheri</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
