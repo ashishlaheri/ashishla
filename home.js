@@ -1,86 +1,79 @@
-//  tutorial : https://codepen.io/ebinabo/pen/WNwjEaL
+//Activating Mobile Menu
 
-/*
-https://gsap.com/
-*/
-document.getElementById('dark-mode-toggle').addEventListener('click', function () {
-  
-  const body = document.body;
-  const footer = document.querySelector('footer');
-  const isDark = body.classList.toggle('dark-mode');
-  
-  gsap.to(body, {
-    backgroundColor: isDark ? '#2f2f2f' : '#fbfbf0',
-    color: isDark ? '#f6f6dc' : '#2f2f2f',
-    duration: 0.25
-  });
+const showMenu = (toggleId, navId) => {
+    const toggle = document.getElementById(toggleId);
+    const nav = document.getElementById(navId);
 
-  gsap.to(footer, {
-    borderColor:isDark ? '#f6f6dc' : '#2f2f2f',
-    duration: 0.15});
-});
+    if(toggle && nav) {
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        })
+    }
+}
 
-/* 
-https://swiperjs.com
-*/
-const swiper = new Swiper(".swiper-slider", {
-  centeredSlides: true,
-  speed:800,
-  slidesPerView: 1,
-  grabCursor: true,
-  freeMode: false,
-  loop: true,
-  touchRatio: 1.5,
-  spaceBetween: 0.0,
-  mousewheel: false,
-  keyboard: {
-    enabled: true
-  },
-  autoplay:true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "progressbar",
-  }
-});
+showMenu('nav-toggle', 'nav-menu');
 
-/* 
-https://github.com/locomotivemtl/locomotive-scroll 
-*/
-const scroller = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true
-});
+//Toggling Menu by clicking in mobile menu links
 
-// Navigation
-document.querySelectorAll('.nav-bar a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
-    const targetSection = document.getElementById(targetId);
-    scroller.scrollTo(targetSection);
-  });
-});
+const navLink = document.querySelectorAll('.nav-link');
 
-// go top
-document.querySelector('.go').addEventListener('click', function (e) {
-  e.preventDefault();
-  const targetId = this.getAttribute('href').substring(1);
-  const targetSection = document.getElementById(targetId);
-  scroller.scrollTo(targetSection);
-});
-document.getElementById('redir1').addEventListener('click', function() { window.open('https://youtu.be/eF_JDIWrsZ0?si=1tH8J3cY7sCgTe2y', '_blank'); });
-document.getElementById('redir2').addEventListener('click', function() { window.open('https://github.com/ashishlaheri', '_blank'); });
-document.getElementById('redir3').addEventListener('click', function() { window.open('https://www.linkedin.com/in/ashish-kumar-laheri/', '_blank'); });
-document.getElementById('redir4').addEventListener('click', function() { window.open('#', '_blank'); });
-document.getElementsByClassName("redirect-section1")[0].addEventListener("click", () => {
-  // Redirect to a blank page or any URL
-  window.open("https://github.com/ashishlaheri/J.A.R.V.I.S", "_blank");
-});
-document.getElementsByClassName("redirect-section2")[0].addEventListener("click", () => {
-  // Redirect to a blank page or any URL
-  window.open("https://github.com/ashishlaheri/bank-management-system", "_blank");
-});
+function linkAction() {
+    navLink.forEach(n => n.classList.remove('active'));
+    this.classList.add('active');
+
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.remove('show');
+}
+
+navLink.forEach(n => n.addEventListener('click', linkAction));
+
+// Changing Active Menu section while scrolling
+
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', scrollActive);
+
+function scrollActive() {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute('id');
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active');
+        } else {
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active');
+        }
+    })
+}
+
+// Scroll Reveal Settings
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+})
+
+sr.reveal('.home-title', {});
+sr.reveal('.home-scroll', {delay: 200});
+sr.reveal('.home-img', {origin: 'right', delay: 400 });
+
+sr.reveal('.about-img', {delay: 500});
+sr.reveal('.about-subtitle', {delay: 300});
+sr.reveal('.about-profession', {delay: 400});
+sr.reveal('.about-text', {delay: 500});
+sr.reveal('.about-social-icon', {delay: 600, interval: 200});
+
+sr.reveal('.skills-subtitle', {});
+sr.reveal('.skills-name', {distance: '20px', delay: 50, interval: 100});
+sr.reveal('.skills-img', {delay: 400});
+
+sr.reveal('.portfolio-img', {interval: 200});
+
+sr.reveal('.contact-subtitle', {});
+sr.reveal('.contact-text', {interval: 200});
+sr.reveal('.contact-input', {delay: 400});
+sr.reveal('.contact-button', {delay: 600});

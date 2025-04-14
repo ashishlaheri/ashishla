@@ -1,320 +1,236 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Ashish-Home</title>
-  <link rel="stylesheet" href="home.css">
-  
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
 <html lang="en">
-
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light">
-    <meta name="supported-color-schemes" content="light">
-
-    <title>home</title>
-
-    <link rel="stylesheet" href="https://api.fontshare.com/css?f[]=satoshi@1,300,301,700&f[]=clash-grotesk@1,200,201,600&f[]=quicksand@1,500,600,700&display=swap">
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-
-    <style>
-      /* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Satoshi', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* Header and Navigation */
-.header h1 {
-  font-size: 2.5rem;
-  color: #2a2a2a;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.nav-bar ul {
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.nav-bar li {
-  margin: 0 1rem;
-}
-
-.nav-bar a {
-  text-decoration: none;
-  color: #2a2a2a;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-bar a:hover {
-  color: #007bff;
-}
-
-/* Main Section */
-.main-section {
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.main-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.main-section p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Swiper */
-.swiper-container {
-  margin: 2rem auto;
-  width: 90%;
-}
-
-.swiper-slide img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer */
-footer {
-  background-color: #2a2a2a;
-  color: #fff;
-  padding: 1.5rem 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-footer div {
-  margin-bottom: 1rem;
-}
-
-footer h2 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-footer a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #007bff;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .header h1 {
-    font-size: 1.8rem;
-  }
-
-  .nav-bar ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .swiper-container {
-    width: 100%;
-  }
-
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-    </style>
-  </head>
-  <body>
-
-    <main data-scroll-container class="content" id="top">
-      <div class="top-bar">        
-
-        <div>
-          <a class="go" ></a>
-        </div>
-
-
-      </div>
-
-      <div class="header" data-scroll-section>
-
-        <header><h1>Ashish kumar laheri</h1></header>
-
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
-
-        <nav class="nav-bar">
-          <ul>
-            <li><a href="#home" data-scroll>Home</a></li>
-            <li><a href="#about" data-scroll>About</a></li>
-            <li><a href="#case-studies" data-scroll>Case Studies</a></li>
-            <li><a href="#portfolio" data-scroll>Portfolio</a></li>
-            <li><a href="#team" data-scroll>Team</a></li>
-            <li><a href="#contact" data-scroll>Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <section id="home" class="main-section" data-scroll-section>
-        <h2 class="title-section" data-scroll data-scroll-speed="1">Welcome to My World</h2>
-        <p class="subtitle-section" data-scroll data-scroll-speed="2">A jump from today to tommorow</p>
-
-        <div class="swiper-container slider-column">
-          <div class="swiper swiper-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                
-                <img id="redir1" src="img/thubnail1.jpg" alt="Swiper">
-              </div>
-              <div class="swiper-slide">
-          
-                <img id="redir2" src="img/Github.png" alt="Swiper">
-              </div>
-              <div class="swiper-slide">
-                <h1 class="slide-title"></h1>
-                <img id="redir3" src="img/linkidin.png" alt="Swiper">
-              </div>
-              <div class="swiper-slide">
-                <h1 class="slide-title"></h1>
-                <img id="redir4" src="img/poems.png" alt="Swiper">
-              </div>
-              <div class="swiper-slide">
-                <h1 class="slide-title"></h1>
-                <img id="redir5" src="img/JARVIS.png" alt="Swiper">
-              </div>
+    <title>Portfolio Landing Page</title>
+    <link rel="stylesheet" href="home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav-logo">Ashish Kumar Laheri</a>
             </div>
-          </div>
-          <span class="progressbar"></span>
-        </div>
-      </section>
 
-      <section id="about" class="main-section aboutse" data-scroll-section>
-        <h2 class="title-section" data-scroll data-scroll-speed="1">About Me</h2>
-        <p class="subtitle-section" data-scroll data-scroll-speed="2">Just  human being like everyone else, Lesser the Ego more the Knowledge.</p>
-        <p>Hey there, I'm Ashish, a B.Tech student diving deep into the fascinating world of Computer Science and Engineering, with a passion for AI development. Life's been a wild ride lately, hasn't it? Well, amidst the chaos. But hey, life isn't all code and algorithms. You'll catch me on the court, ballin' it up in some intense basketball showdowns. And when I'm not busy crossing over, you'll find me crushing coding challenges with the finesse of a ninja hacker. I believe in the power of perpetual growth  because let's face it, stagnation is so last season! So, whether you're up for a brainstorming session or just wanna shoot some hoops.</p>
-        <img width="50%" src="img/poems.png" alt="">
-      </section>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
 
-      <section id="case-studies" class="main-section" data-scroll-section>
-        <h2 class="title-section" data-scroll data-scroll-speed="1">Project Studio</h2>
-        <p class="subtitle-section" data-scroll data-scroll-speed="2">Explore our latest projects we  work on.</p>
-        <div class="team-member" data-scroll data-scroll-speed="2"> 
-          <img class="project-logo redirect-section1" width="100px" src="img/jarvis.jpeg" alt="Team Member">
-          <h3 class="project-logo redirect-section1">J.A.R.V.I.S</h3>
-          <p class="project-logo redirect-section1">Virtual Assistance</p>
-        </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
 
-        <div class="team-member" data-scroll data-scroll-speed="3">
-          <img class="project-logo redirect-section2" width="100px" src="img/bank-management-system.png" alt="Team Member">
-          <h3 class="project-logo redirect-section2">Bank Management</h3>
-          <p class="project-logo redirect-section2">System</p>
-        </div>
-      </section>
+    <main class="l-main">
+        <section class="home" id="home">
+            <div class="home-container bd-grid">
+                <h1 class="home-title"><span>HE</span><br>LLO</h1>
 
-      <section id="portfolio" class="main-section" data-scroll-section>
-        <h2 class="title-section" data-scroll data-scroll-speed="1">Portfolio</h2>
-        <p class="subtitle-section" data-scroll data-scroll-speed="2">Check out My portfolio.</p>
-      </section>
+                <div class="home-scroll">
+                    <a href="#about" class="home-scroll-link"><i class='bx bx-up-arrow-alt' ></i>SCROLL DOWN</a>
+                </div>
 
-      <section id="team" class="main-section" data-scroll-section>
-        <h2 class="title-section" data-scroll data-scroll-speed="1">Our Poems</h2>
-        <p class="subtitle-section" data-scroll data-scroll-speed="2" class="team"> Re Think your life </p>
-        <div class="link-container">
-          <img class="poem-image" src="img/poems.png" alt="Poem Image">
-          <p>
-            <a href="poem.html" target="_blank" class="styled-link">Explore Poems</a>
-          </p>
-        </div>
-        
-      </section>
+                <img src="ashsih_profile-removebg-preview.png" alt="Ashish" class="home-img">
+            </div>
+        </section>
+    
 
-      <section id="contact" class="main-section" data-scroll-section>
-        <h2 class="title-section"  data-scroll data-scroll-speed="1">Contact Us</h2>
-        <p class="subtitle-section" data-scroll data-scroll-speed="2">Get in touch with us for your next project.</p>
-      </section>
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
 
-      <footer data-scroll-section>
-        <div>
-          <h2>Company</h2>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Resources</h2>
-          <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Contact Support</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Legal</h2>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Social</h2>
-          <ul>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Facebook</a></li>
-          </ul>
-        </div>
-      </footer>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-  </body>
-</html>
-<!-- partial -->
-  <script  src="home.js"></script>
-  <script>
-    // Add the 'loaded' class after the page has fully loaded
-    window.addEventListener('load', () => {
-      document.body.classList.add('loaded');
+            <div class="about-container bd-grid">
+                <div class="about-img">
+                    <img src="picofme.png" alt="John Doe image">
+                </div>
+
+                <div>
+                    <h2 class="about-subtitle">I'm Ashish kumar laheri</h2>
+                    <span class="about-profession">Cloud Developer</span>
+                    <p class="about-text">As a passionate cloud developer, I thrive on building scalable and efficient cloud-based solutions. My journey in cloud development began with a fascination for how cloud technology can enhance application performance and user experience</p>
+
+                    <div class="about-social">
+                        <a href="https://www.linkedin.com/in/ashish-kumar-laheri/" class="about-social-icon"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/ashishlaheri" class="about-social-icon"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.instagram.com/laheriashish?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="about-social-icon"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>   
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-container bd-grid">
+                <div class="skills-box">
+                    <h3 class="skils-subtitle">Development</h3>
+
+                    <span class="skills-name">DOCKER</span>
+                    <span class="skills-name">KUBERNETS</span>
+                    <span class="skills-name">JENKINS</span>
+                    <span class="skills-name">PYTHON</span>
+                    <span class="skills-name">REACT</span>
+                    <span class="skills-name"></span>
+
+                    <h3 class="skils-subtitle">Deployement</h3>
+
+                    <span class="skills-name">AZURE</span>
+                    <span class="skills-name">AWS</span>
+                    <span class="skills-name">SAP-CLOUDS</span>
+                </div>
+
+                <div class="skills-img">
+                    <img src="skills.png" alt="skills image">
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+
+            <div class="portfolio-container bd-grid">
+                <div class="portfolio-img">
+                    <img src="youtube.jpeg" alt="work image">
+
+                    <div class="portfolio-link">
+                        <a href="https://www.youtube.com/channel/UCbb8CM5Z-ZSLFcpmb79aY9A" class="portfolio-link-name">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-img">
+                    <img src="yt.jpg" alt="work image">
+
+                    <div class="portfolio-link">
+                        <a href="https://youtu.be/eF_JDIWrsZ0?si=Z2NjIq2gKZ2-SpIY" class="portfolio-link-name">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-img">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/0*KX_DOGlQZx2rE8a3" alt="work image">
+
+                    <div class="portfolio-link">
+                        <a href="https://github.com/ashishlaheri/jarvis-Meta" class="portfolio-link-name">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-img">
+                    <img src="Screenshot 2025-04-14 123315.png" alt="work image">
+
+                    <div class="portfolio-link">
+                        <a href="https://medium.com/@yoashishkumar13/what-is-infiniband-6edf7eb29095" class="portfolio-link-name">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-img">
+                    <img src="https://editor.analyticsvidhya.com/uploads/765900ba9-article-200807-github-gitguardbody-text.jpg" alt="work image">
+
+                    <div class="portfolio-link">
+                        <a href="https://github.com/ashishlaheri" class="portfolio-link-name">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-img">
+                    <img src="https://eccles.utah.edu/wp-content/uploads/2016/10/linkedin-earnings1.png" alt="work image">
+
+                    <div class="portfolio-link">
+                        <a href="https://www.linkedin.com/in/ashish-kumar-laheri/" class="portfolio-link-name">View Details</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact-container bd-grid">
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">EMAIL</h3>
+                    <span class="contact-text"></span>
+
+                    <h3 class="contact-subtitle">PHONE</h3>
+                    <span class="contact-text">+91  8409449418</span>
+
+                    <h3 class="contact-subtitle">ADDRESS</h3>
+                    <span class="contact-text">Lovely Professional University, Punjab, India</span>
+                </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Your Contact Form -->
+<form action="" class="contact-form" id="contactForm">
+    <div class="contact-inputs">
+        <input type="text" placeholder="Name" class="contact-input" required>
+        <input type="email" placeholder="Email" class="contact-input" required>
+    </div>
+
+    <textarea placeholder="Your Message" cols="0" rows="10" class="contact-input" required></textarea>
+
+    <input type="submit" value="Send" class="contact-button">
+</form>
+
+<!-- JavaScript to handle form submit and show popup -->
+<script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent actual form submission
+
+        // You can optionally add form validation here
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Message Sent!',
+            text: 'We will reach you later.',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Okay'
+        });
+
+        // Optional: Reset the form after popup
+        form.reset();
     });
-  </script>
+</script>
+            </div>
+        </section>
 
+    </main>
+
+    <footer class="footer section">
+        <div class="footer-container bd-grid">
+            <div class="footer-data">
+                <h2 class="footer-title">Ashish kumar laheri</h2>
+                <p class="footer-text">I'm Ashish and this is my personal website</p>
+            </div>
+
+            <div class="footer-data">
+                <h2 class="footer-title">Ashish</h2>
+                <ul>
+                    <li><a href="#home" class="footer-link">Home</a></li>
+                    <li><a href="#about" class="footer-link">About</a></li>
+                    <li><a href="#skills" class="footer-link">Skills</a></li>
+                    <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
+                    <li><a href="#contact" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-data">
+                <h2 class="footer-title">FOLLOW</h2>
+
+                <a href="https://www.instagram.com/laheriashish?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="footer-social"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="footer-social"><i class='bx bxl-facebook'></i></a>
+                <a href="https://x.com/LaheriAshish" class="footer-social"><i class='bx bxl-twitter'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="home.js"></script>
 </body>
 </html>
